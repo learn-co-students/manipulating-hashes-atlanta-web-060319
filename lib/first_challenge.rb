@@ -2,8 +2,8 @@ def first_challenge
   contacts = {
     "Jon Snow" => {
       name: "Jon",
-      email: "jon_snow@thewall.we", 
-      favorite_icecream_flavors: ["chocolate", "vanilla", "mint chip"],
+      email: "jon_snow@thewall.we",
+      favorite_icecream_flavors: ["chocolate", "vanilla"],
       knows: nil
     },
     "Freddy Mercury" => {
@@ -12,11 +12,9 @@ def first_challenge
       favorite_icecream_flavors: ["strawberry", "cookie dough", "mint chip"]
     }
   }
-
-  #your code here
+  contacts.delete_if{["Freddy Mercury"][:favorite_icecream_flavors] = "strawberry"}' do 
 
 
   #remember to return your newly altered contacts hash!
-  contacts
+  return contacts
 end
-
